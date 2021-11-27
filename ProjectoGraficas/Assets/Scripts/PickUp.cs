@@ -8,9 +8,33 @@ public class PickUp : MonoBehaviour
 
     void OnMouseDown()
     {
-        GetComponent<BoxCollider>().enabled = false;
-        GetComponent<SphereCollider>().enabled = false;
-        GetComponent<CapsuleCollider>().enabled = false;
+        try
+        {
+            GetComponent<BoxCollider>().enabled = false;
+        }
+        catch (System.Exception e)
+        {
+
+        }
+
+        try
+        {
+            GetComponent<SphereCollider>().enabled = false;
+        }
+        catch (System.Exception e)
+        {
+
+        }
+
+        try
+        {
+            GetComponent<CapsuleCollider>().enabled = false;
+        }
+        catch (System.Exception e)
+        {
+
+        }
+        
         GetComponent<Rigidbody>().useGravity = false;
         this.transform.position = theDest.position;
         this.transform.parent = GameObject.Find("Destination").transform;
@@ -20,8 +44,31 @@ public class PickUp : MonoBehaviour
     {
         this.transform.parent = null;
         GetComponent<Rigidbody>().useGravity = true;
-        GetComponent<BoxCollider>().enabled = true;
-        GetComponent<SphereCollider>().enabled = true;
-        GetComponent<CapsuleCollider>().enabled = true;
+        try
+        {
+            GetComponent<BoxCollider>().enabled = true;
+        }
+        catch (System.Exception e)
+        {
+
+        }
+
+        try
+        {
+            GetComponent<SphereCollider>().enabled = true;
+        }
+        catch (System.Exception e)
+        {
+
+        }
+
+        try
+        {
+            GetComponent<CapsuleCollider>().enabled = true;
+        }
+        catch (System.Exception e)
+        {
+
+        }
     }
 }

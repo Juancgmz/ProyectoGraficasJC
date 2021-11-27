@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - appleText
+  - grapeText
+  - cherryText
+  - pumpkinText
+  - lemonText
+  - orangeText
   layers:
   - Default
   - TransparentFX
